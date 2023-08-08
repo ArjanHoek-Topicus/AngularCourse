@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public name = 'Arjan';
   public showName = true;
-  public clicks = [];
+  public log = [];
 
   public toggle() {
     this.showName = !this.showName;
-    this.clicks.push(+new Date());
+    this.log.push(+new Date());
   }
 }

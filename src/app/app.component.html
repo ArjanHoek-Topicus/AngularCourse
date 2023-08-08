@@ -9,13 +9,13 @@
   </div>
   <div>
     <p
-      *ngFor="let click of clicks; let i = index"
+      *ngFor="let date of log; let i = index"
       [ngStyle]="{
         background: i >= 4 ? '#00f' : 'transparent'
       }"
       [ngClass]="{ 'text-white': i >= 4 }"
     >
-      {{ click | date : "HH:mm:ss:SS" }}
+      {{ date | date : "HH:mm:ss:SS" }}
     </p>
   </div>
 </div>
