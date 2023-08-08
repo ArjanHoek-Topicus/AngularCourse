@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <button (click)="toggle()" class="btn btn-primary">Display name</button>
+    </div>
+    <div class="col-xs-6">
+      <p *ngIf="showName">{{ name }}</p>
+    </div>
+  </div>
+  <div>
+    <p
+      *ngFor="let click of clicks; let i = index"
+      [ngStyle]="{
+        background: i >= 4 ? '#00f' : 'transparent'
+      }"
+      [ngClass]="{ 'text-white': i >= 4 }"
+    >
+      {{ click | date : "HH:mm:ss:SS" }}
+    </p>
+  </div>
+</div>
